@@ -18,3 +18,29 @@ Run the agent with a prompt describing your coding issue:
 
 ```bash
 uv run main.py "Describe your bug or coding issue here" [--verbose]
+```
+
+# 📂 Project Structure
+
+- **main.py** – Entry point and agent workflow  
+- **functions/** – Modular tools for file operations and code execution  
+- **calculator/** – Example submodule with sample code and tests  
+- **.env** – Stores your `GEMINI_API_KEY` for API access  
+
+---
+
+# 🛠 Requirements
+
+- Python **3.12+**  
+- Google Gemini API key (set in `.env`)  
+- Required packages listed in **pyproject.toml**  
+
+---
+
+# ⚙️ How It Works
+
+1. Receives a user prompt describing a bug or coding task  
+2. Inspects relevant files and code sections  
+3. Identifies and applies code fixes  
+4. Verifies the fix by running the affected code  
+5. Provides a clear summary of the fix and verification result  
